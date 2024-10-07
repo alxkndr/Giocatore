@@ -27,7 +27,16 @@ public class Main {
 
             switch (scelta) {
                 case 1:
-
+                    System.out.println("Aggiungi un giocatore... ");
+                    System.out.println("Nome: ");
+                    String nome = in.next();
+                    System.out.println("Capitano (true/false): ");
+                    boolean capitano = in.hasNext();
+                    System.out.println("Goal: ");
+                    int goal = in.nextInt();
+                    Giocatore.AggiungiGiocatore(arrayGiocatore,arrayCapitano,arrayGoal,nome,capitano,goal, count);
+                    count++;
+                    break;
                 case 0:
                     input = true;
                     System.out.println("Stai uscendo dal concessionario...");
