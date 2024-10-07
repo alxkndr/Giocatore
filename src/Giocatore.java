@@ -45,14 +45,9 @@ public class Giocatore {
     public static void AggiungiGiocatore(Giocatore[] squadra, String nome, boolean capitano, int goal, int count){
         squadra[count] = new Giocatore(nome, capitano, goal);
     }
-    public static void VisualizzaRosa(String[]arrayGiocatore, String[]arrayCapitano, String[]arrayGoal){
-        for (int i = 0; i < arrayGiocatore.length; i++){
-            if (arrayGiocatore[i] == null){
-                break;
-            }
-            else {
-                System.out.println("Giocatore: " + arrayGiocatore[i]+ " Capitano:" + arrayCapitano[i] + " Goal:" + arrayGoal[i]);
+    public static void VisualizzaRosa(Giocatore[] squadra, int count){
+        for (int i = 0; i < count; i++){
+                System.out.println("Giocatore: " + squadra[i].getNome() + " Capitano:" + squadra[i].getCapitano() + " Goal:" + squadra[i].getGoal());
             }
         }
     }
-}

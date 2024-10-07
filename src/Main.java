@@ -38,6 +38,9 @@ public class Main {
                     }
                     count++;
                     break;
+                case 2:
+                    Giocatore.VisualizzaRosa(squadra,count);
+                    break;
                 case 0:
                     input = true;
                     System.out.println("Stai uscendo dal campo...");
