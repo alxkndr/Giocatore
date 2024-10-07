@@ -2,16 +2,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Giocatore g1 = new Giocatore("Cristiano Ronaldo", true, 900);
-        Giocatore g2 = new Giocatore();
-        Giocatore g3 = new Giocatore("Kylian Mbappè", false, 300);
-
         Scanner in = new Scanner(System.in);
-        boolean input = false;
-        String[] arrayGiocatore = new String[10];
-        boolean[] arrayCapitano = new boolean[10];
-        int[] arrayGoal = new int[10];
+
+        System.out.println("Quanti giocatori vuoi nella tua squadra: ");
+        int n = in.nextInt();
+        Giocatore[] squadra;
+        squadra = new Giocatore[n];
+
         int count = 0;
+        boolean input = false;
+
         do {
 
             System.out.println("1- Aggiungere un giocatore alla squadra, controllando che non ci sia più di un capitano");
@@ -27,14 +27,15 @@ public class Main {
 
             switch (scelta) {
                 case 1:
-                    System.out.println("Aggiungi un giocatore... ");
-                    System.out.println("Nome: ");
-                    String nome = in.next();
-                    System.out.println("Capitano (true/false): ");
-                    boolean capitano = in.hasNext();
-                    System.out.println("Goal: ");
-                    int goal = in.nextInt();
-                    Giocatore.AggiungiGiocatore(arrayGiocatore,arrayCapitano,arrayGoal,nome,capitano,goal, count);
+                    for (int i = 0; i < count; i++) {
+                        System.out.println("Aggiungi il nome del giocatore: ");
+                        String nome = in.next();
+                        System.out.println("Scegli se è capitano o meno (true/false): ");
+                        boolean capitano = in.nextBoolean();
+                        System.out.println("Goal: ");
+                        int goal = in.nextInt();
+                        Giocatore.AggiungiGiocatore(nome, capitano, goal, count);
+                    }
                     count++;
                     break;
                 case 0:
@@ -42,7 +43,7 @@ public class Main {
                     System.out.println("Stai uscendo dal concessionario...");
                     break;
             }
-        } while (!input);
+        }while (!input);
     }
 }
 

@@ -42,10 +42,8 @@ public class Giocatore {
         this.goal = goal;
     }
 
-    public static void AggiungiGiocatore(String[]arrayGiocatore, boolean[]arrayCapitano, int[]arrayGoal, String giocatore, boolean capitano, int goal, int count){
-        arrayGiocatore[count] = giocatore;
-        arrayCapitano[count] = capitano;
-        arrayGoal[count] = goal;
+    public static void AggiungiGiocatore(Giocatore squadra, String nome, boolean capitano, int goal, int count){
+        squadra[count] = new Giocatore(nome, capitano, goal);
     }
     public static void VisualizzaRosa(String[]arrayGiocatore, String[]arrayCapitano, String[]arrayGoal){
         for (int i = 0; i < arrayGiocatore.length; i++){
