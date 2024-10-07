@@ -34,13 +34,13 @@ public class Main {
                         boolean capitano = in.nextBoolean();
                         System.out.println("Goal: ");
                         int goal = in.nextInt();
-                        Giocatore.AggiungiGiocatore(nome, capitano, goal, count);
+                        Giocatore.AggiungiGiocatore(squadra, nome, capitano, goal, count);
                     }
                     count++;
                     break;
                 case 0:
                     input = true;
-                    System.out.println("Stai uscendo dal concessionario...");
+                    System.out.println("Stai uscendo dal campo...");
                     break;
             }
         }while (!input);
