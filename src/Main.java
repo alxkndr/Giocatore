@@ -21,7 +21,7 @@ public class Main {
             System.out.println("5- Visualizzare i giocatori che hanno realizzato più di 5 goal.");
             System.out.println("6- Visualizzare il nome del capitano");
             System.out.println("7- Assegnare il ruolo di capitano in modo casuale se non ancora presente");
-            System.out.println("0- Esci dal concessionario");
+            System.out.println("0- Esci dal campo");
 
             int scelta = in.nextInt();
 
