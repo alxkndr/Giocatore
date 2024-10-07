@@ -18,6 +18,18 @@ public class Giocatore {
         setGoal(goal);
     }
 
+    public Giocatore(String nome) {
+        setNome(nome);
+        this.capitano = true;
+        this.goal = 350;
+    }
+
+    public Giocatore(int goal) {
+        this.nome = "Angel Di Maria";
+        this.capitano = true;
+        setGoal(goal);
+    }
+
     public String getNome(){
         return nome;
     }
